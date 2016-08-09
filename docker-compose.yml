@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  db:
+    image: redis
+  import:
+    build:
+      context: .
+      dockerfile: Dockerfile-import
+    links:
+      - db:redis
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    links:
+      - db:redis
+    ports:
+      - 7878:7878
