@@ -4,7 +4,6 @@ EXTRA_FIELDS = [
     {'key': 'citycode'},
 ]
 FILTERS = ['type', 'postcode', 'citycode', 'city']
-BLOCKED_PLUGINS = ['addok.pairs', 'addok.fuzzy', 'addok.autocomplete']
 QUERY_PROCESSORS = [
     'addok_france.extract_address',
     'addok_france.clean_query',
