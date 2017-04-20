@@ -1,19 +1,17 @@
-version: "2"
+version: "3"
 
 services:
-  db:
+  addock-db:
     image: redis
-  import:
-    build:
-      context: .
-      dockerfile: Dockerfile-import
-    links:
-      - db:redis
-  api:
+    volumes:
+      - ./redis-data:/data
+  addock-api:
     build:
       context: .
       dockerfile: Dockerfile-api
     links:
-      - db:redis
+      - addock-db:redis
     ports:
       - 7878:7878
+    volumes:
+      - ./addok-data:/data
