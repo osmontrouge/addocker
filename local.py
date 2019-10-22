@@ -3,7 +3,8 @@ LOG_NOT_FOUND = False
 EXTRA_FIELDS = [
     {'key': 'citycode'},
 ]
-FILTERS = ['type', 'postcode', 'citycode', 'city']
+FILTERS = ['type']
+ATTRIBUTION = 'OpenStreetMap Contributors'
 QUERY_PROCESSORS = [
     'addok_france.extract_address',
     'addok_france.clean_query',
