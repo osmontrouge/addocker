@@ -8,7 +8,6 @@ services:
   addock-api:
     build:
       context: .
-      dockerfile: Dockerfile-api
     links:
       - addock-db:redis
     ports:
