@@ -10,6 +10,7 @@ RUN pip install addok
 RUN pip install addok-fr
 RUN pip install addok-france
 RUN pip install addok-csv
+RUN pip install addok-getbyid
 RUN pip install gunicorn
 
 COPY local.py /app
